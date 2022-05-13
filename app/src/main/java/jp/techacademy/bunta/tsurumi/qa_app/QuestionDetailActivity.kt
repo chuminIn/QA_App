@@ -61,12 +61,15 @@ class QuestionDetailActivity : AppCompatActivity() {
 
         val user = FirebaseAuth.getInstance().currentUser
 
-        if (user == null) {
+        /*if (user == null) {
             Log.d("android","fffffffffffff")
             favoriteImageView.visibility=View.INVISIBLE
         } else {
             //favoriteImageView.visibility=View.VISIBLE
         }
+        * */
+
+
 
         // 渡ってきたQuestionのオブジェクトを保持する
         val extras = intent.extras
@@ -79,9 +82,7 @@ class QuestionDetailActivity : AppCompatActivity() {
         listView.adapter = mAdapter
         mAdapter.notifyDataSetChanged()
 
-        favoriteImageView.setOnClickListener {
 
-        }
 
 
 
