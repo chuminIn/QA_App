@@ -63,6 +63,7 @@ class QuestionDetailListAdapter(context: Context, private val mQustion: Question
             val nameTextView = convertView.nameTextView as TextView
             nameTextView.text = name
 
+            
             val bytes = mQustion.imageBytes
             val favorite=mQustion.favoriteImage
 
