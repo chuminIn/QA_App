@@ -64,6 +64,11 @@ class QuestionDetailListAdapter(context: Context, private val mQustion: Question
             nameTextView.text = name
 
             val bytes = mQustion.imageBytes
+            val favorite=mQustion.favoriteImage
+
+            val favoriteView = convertView.findViewById<View>(R.id.favoriteImageView) as ImageView
+            favoriteView.setImageBitmap(favorite)
+
             if (bytes.isNotEmpty()) {
                 val image = BitmapFactory.decodeByteArray(bytes, 0, bytes.size).copy(Bitmap.Config.ARGB_8888, true)
                 val imageView = convertView.findViewById<View>(R.id.imageView) as ImageView
